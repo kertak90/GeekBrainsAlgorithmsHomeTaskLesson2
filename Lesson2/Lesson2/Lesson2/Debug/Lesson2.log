@@ -1,0 +1,3 @@
+﻿  MainClass.c
+d:\c# projects\си алгоритмы\урок 2\lesson2\lesson2\lesson2\mainclass.c(35): warning C4013: system: нет определения; предполагается "extern" с возвратом типа "int"
+  Lesson2.vcxproj -> D:\C# projects\Си Алгоритмы\Урок 2\Lesson2\Lesson2\Debug\Lesson2.exe
