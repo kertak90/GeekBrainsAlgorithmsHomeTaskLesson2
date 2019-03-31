@@ -1,6 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <locale.h>
+#include <stdlib.h>
 /*
 	Пинарин Олег
 	1. Реализовать функцию перевода из 10 системы в двоичную используя рекурсию.
@@ -24,6 +25,9 @@ int NumberRateRecursive(int, int);
 void NumberRateRecursiveOddUseDemonstr();
 int NumberRateOddUse(int, int);
 int NumberRateRecursiveOddUse(int, int);
+long Counter = 0;
+void Calculator();
+void Calculate(long, long);
 
 int main()
 {
@@ -48,6 +52,9 @@ int main()
 				break;
 			case 4:
 				NumberRateRecursiveOddUseDemonstr();
+				break;
+			case 5:
+				Calculator();
 				break;
 			default:
 				printf("Неверный ввод!!!\n");
@@ -81,6 +88,7 @@ void DecConvertToBinary()
 //a.без рекурсии;
 void NumberRate()
 {
+	printf("2. Реализовать функцию возведения числа a в степень b без рекурсии:\n");
 	int a, b;
 	int result = 0;
 	printf("Введите число a:\n");
@@ -101,6 +109,7 @@ void NumberRate()
 //b.рекурсивно;
 void NumberRateRecursiveDemonstr()
 {
+	printf("2. Реализовать функцию возведения числа a в степень b рекурсивно:\n");
 	int a, b;
 	int result = 0;
 	printf("Введите число a:\n");
@@ -124,6 +133,7 @@ int NumberRateRecursive(int a, int b)
 //c. *рекурсивно, используя свойство чётности степени.
 void NumberRateRecursiveOddUseDemonstr()
 {
+	printf("2. Реализовать функцию возведения числа a в степень b рекурсивно, используя свойство четности степени:\n");
 	int a, b;
 	int result = 0;
 	printf("Введите число a:\n");
@@ -160,6 +170,7 @@ int NumberRateOddUse(int a, int b)
 	system("pause");
 }
 
+//Рекурсивно, используя свойство четности степени
 int NumberRateRecursiveOddUse(int a, int b)
 {
 	int n = 1;
@@ -187,4 +198,39 @@ int NumberRateRecursiveOddUse(int a, int b)
 //Первая команда увеличивает число на экране на 1, вторая увеличивает его в 2 раза.Определить, сколько существует программ, которые преобразуют число 3 в число 20 :
 //	а.С использованием массива.
 //	b.*С использованием рекурсии.
-
+void Calculator()
+{
+	printf("3. Первая команда увеличивает число на экране на 1, вторая увеличивает его в 2 раза.\n	Определить, сколько существует программ, которые преобразуют число 3 в число 20.\n");
+	int a, b;
+	
+	printf("Введите число a:\n");
+	scanf("%i", &a);
+	printf("введите число b:\n");
+	scanf("%i", &b);
+	
+	char *charList = "";
+	Counter = 0;
+	Calculate(a, b, charList);
+	printf("Существует: %i решений данной задачи!!!\n", Counter);
+	system("pause");
+}
+void Calculate(long a, long b, char* charList)
+{
+	if (a == b)
+	{
+		Counter++;
+		printf("Последовательность действий: %s\n", charList);
+	}
+	if (a < b)
+	{
+		size_t len = strlen(charList);
+		char *str2 = malloc(len + 1 + 1); /* one for extra char, one for trailing zero */
+		strcpy(str2, charList);		
+		
+		str2[len] = '+';
+		str2[len + 1] = '\0';
+		Calculate(a+1, b, str2);
+		str2[len] = '*';		
+		Calculate(a*2, b, str2);
+	}
+}
