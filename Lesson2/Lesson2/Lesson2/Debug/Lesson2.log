@@ -1,6 +1,6 @@
 ﻿  MainClass.c
-d:\c# projects\си алгоритмы\git-lesson2\lesson2\lesson2\lesson2\mainclass.c(213): warning C4020: Calculate: слишком много фактических параметров
-d:\c# projects\си алгоритмы\git-lesson2\lesson2\lesson2\lesson2\mainclass.c(218): warning C4029: объявленный список формальных параметров отличается от объявления
-d:\c# projects\си алгоритмы\git-lesson2\lesson2\lesson2\lesson2\mainclass.c(228): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
-d:\c# projects\си алгоритмы\git-lesson2\lesson2\lesson2\lesson2\mainclass.c(230): warning C4013: strcpy: нет определения; предполагается "extern" с возвратом типа "int"
+d:\c# projects\си алгоритмы\git-lesson2\lesson2\lesson2\lesson2\mainclass.c(218): warning C4020: Calculate: слишком много фактических параметров
+d:\c# projects\си алгоритмы\git-lesson2\lesson2\lesson2\lesson2\mainclass.c(223): warning C4029: объявленный список формальных параметров отличается от объявления
+d:\c# projects\си алгоритмы\git-lesson2\lesson2\lesson2\lesson2\mainclass.c(231): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
+d:\c# projects\си алгоритмы\git-lesson2\lesson2\lesson2\lesson2\mainclass.c(233): warning C4013: strcpy: нет определения; предполагается "extern" с возвратом типа "int"
   Lesson2.vcxproj -> D:\C# projects\Си Алгоритмы\git-Lesson2\Lesson2\Lesson2\Debug\Lesson2.exe
